@@ -135,3 +135,40 @@ iframe {
     border: 1px solid #ccc;
     margin-top: 20px;
 }
+
+/* --- 기본 레이아웃 --- */
+body { margin: 0; font-family: "Times New Roman", "Malgun Gothic", serif; background: #fff; color: #333; line-height: 1.5; }
+.container { max-width: 1050px; margin: 0 auto; padding: 20px; }
+
+/* --- 상단 검정 배너 --- */
+.top-banner { background: #222; color: #fff; height: 45px; display: flex; align-items: center; }
+.banner-container { width: 1050px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+.school-name { font-size: 16px; font-weight: bold; letter-spacing: 0.5px; }
+.banner-logo { height: 32px; width: auto; object-fit: contain; display: block; }
+
+/* --- 메인 로고 영역 --- */
+.main-logo-area { padding: 20px 20px 5px 20px; }
+.main-logo-area h1 { display: flex; align-items: baseline; margin: 0; font-size: 40px; }
+.main-logo-area h1 a { color: #b31b1b; text-decoration: none; font-weight: bold; }
+.sub-logo-text { font-size: 15px; color: #666; margin-left: 12px; font-family: sans-serif; font-weight: normal; }
+
+/* --- 네비게이션 --- */
+.nav-menu { padding: 5px 20px 15px 20px; border-bottom: 1px solid #ddd; font-size: 14px; }
+.nav-menu a { text-decoration: none; color: #004b87; font-weight: bold; }
+
+/* --- 리스트 공통 스타일 --- */
+.subject-title { background: #f4f4f4; border-left: 5px solid #b31b1b; padding: 5px 12px; font-weight: bold; margin-top: 30px; }
+.paper-item-discovery { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+.paper-item-discovery .meta { font-size: 13px; color: #b31b1b; font-weight: bold; margin-bottom: 8px; }
+.paper-item-discovery h3 { margin: 0 0 10px 0; }
+.paper-item-discovery h3 a { text-decoration: none; color: #004b87; font-size: 20px; }
+.abstract-preview { font-size: 15px; color: #444; line-height: 1.6; margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* --- 검색창 --- */
+#search-input { width: 100%; padding: 10px; border: 1px solid #ccc; font-size: 16px; box-sizing: border-box; margin-top: 20px; }
+
+/* --- 상세 페이지 --- */
+.meta-box { background: #f9f9f9; border: 1px solid #ddd; padding: 20px; margin: 20px 0; }
+pre { white-space: pre-wrap; font-family: serif; font-size: 15px; }
+iframe { width: 100%; border: 1px solid #ccc; margin-top: 20px; }
+
