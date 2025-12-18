@@ -1,44 +1,36 @@
-/* --- 게시글 리스트 스타일 (자색 제목 적용) --- */
-.paper-entry { margin-bottom: 60px; padding-bottom: 30px; border-bottom: 1px solid #eee; }
-.paper-entry .entry-subject { font-size: 14px; color: #b31b1b; font-weight: bold; margin-bottom: 5px; }
-
-/* 제목 스타일 (arXiv 고유의 자색/청보라색) */
-.paper-entry h3 { margin: 0 0 10px 0; font-size: 21px; line-height: 1.2; }
-.paper-entry h3 a { 
-    text-decoration: none; 
-    color: #0000ff; /* arXiv 스타일 자색 */
-    font-weight: normal; 
-}
-
-.paper-entry h3 a:hover { 
-    text-decoration: underline; 
-    color: #0000cc; /* 마우스 올렸을 때 살짝 진해짐 */
-}
-
-/* 상세 페이지(paper.html) 제목 자색 적용 */
-#paper-detail h2 { 
-    color: #0000ff; /* 상세 페이지 제목도 자색으로 변경 */
-    font-size: 26px; 
-    border-bottom: 3px solid #b31b1b; 
-    padding-bottom: 10px; 
-    margin-bottom: 20px; 
-}
-
-/* --- 나머지 스타일 유지 --- */
+/* --- 기본 레이아웃 --- */
 body { margin: 0; font-family: "Times New Roman", "Malgun Gothic", serif; background: #fff; color: #333; line-height: 1.6; }
 .container { max-width: 1050px; margin: 0 auto; padding: 20px; }
+
+/* --- 상단 검정 배너 --- */
 .top-banner { background: #222; color: #fff; height: 45px; display: flex; align-items: center; }
 .banner-container { width: 1050px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
 .school-name { font-size: 16px; font-weight: bold; letter-spacing: 0.5px; }
 .banner-logo { height: 32px; width: auto; object-fit: contain; display: block; }
+
+/* --- 메인 로고 영역 (HARA + 서브 텍스트) --- */
 .main-logo-area { padding: 20px 20px 5px 20px; }
 .main-logo-area h1 { display: flex; align-items: baseline; margin: 0; font-size: 40px; }
 .main-logo-area h1 a { color: #b31b1b; text-decoration: none; font-weight: bold; }
 .sub-logo-text { font-size: 15px; color: #666; margin-left: 12px; font-family: sans-serif; font-weight: normal; }
+
+/* --- 네비게이션 --- */
 .nav-menu { padding: 5px 20px 15px 20px; border-bottom: 1px solid #ddd; font-size: 14px; }
 .nav-menu a { text-decoration: none; color: #004b87; font-weight: bold; }
+
+/* --- 리스트 항목 (자색 제목 + 넓은 간격) --- */
+.paper-entry { margin-bottom: 60px; padding-bottom: 30px; border-bottom: 1px solid #eee; }
+.paper-entry .entry-subject { font-size: 14px; color: #b31b1b; font-weight: bold; margin-bottom: 5px; }
+.paper-entry h3 { margin: 0 0 10px 0; font-size: 21px; line-height: 1.2; }
+.paper-entry h3 a { text-decoration: none; color: #0000ff; font-weight: normal; } /* 자색 적용 */
+.paper-entry h3 a:hover { text-decoration: underline; color: #0000cc; }
 .paper-entry .entry-abstract { font-size: 15px; color: #333; margin: 0; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* --- 상세 페이지 전용 (paper.html) --- */
+#paper-detail h2 { color: #0000ff; font-size: 26px; border-bottom: 3px solid #b31b1b; padding-bottom: 10px; margin-bottom: 20px; }
 .meta-box { background: #f9f9f9; border: 1px solid #ddd; padding: 20px; margin: 20px 0; }
 pre { white-space: pre-wrap; font-family: serif; font-size: 15px; }
 iframe { width: 100%; border: 1px solid #ccc; margin-top: 20px; min-height: 900px; }
+
+/* --- 검색창 --- */
 #search-input { width: 100%; padding: 10px; border: 1px solid #ccc; font-size: 16px; box-sizing: border-box; margin-top: 20px; }
