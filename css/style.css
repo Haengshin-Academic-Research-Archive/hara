@@ -1,112 +1,48 @@
-/* 기본 설정 */
-body {
-    margin: 0;
-    font-family: "Times New Roman", "Malgun Gothic", serif;
-    background-color: #fff;
-    color: #333;
-    line-height: 1.5;
+/* 상단 검정 배너 스타일 */
+.top-banner {
+    background: #222;
+    color: #fff;
+    padding: 10px 0; /* 위아래 간격 */
 }
 
-.container {
-    max-width: 1000px;
+.banner-container {
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.school-name {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}
+
+.banner-logo {
+    height: 40px; /* 로고 높이를 배너에 맞게 조절 */
+    width: auto;
+    display: block;
+}
+
+/* 메인 HARA 로고 디자인 */
+.main-logo-area h1 {
+    display: flex;
+    align-items: baseline;
     padding: 20px;
 }
 
-/* 헤더 디자인 (arXiv 스타일) */
-#header {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.top-brand {
-    background: #222;
-    color: #eee;
-    padding: 3px 20px;
-    font-size: 12px;
-}
-
-.main-logo {
-    padding: 10px 20px;
-}
-
-.main-logo h1 {
-    display: inline;
-    font-size: 36px;
-    margin: 0;
-}
-
-.main-logo h1 a {
+.main-logo-area h1 a {
     color: #b31b1b;
     text-decoration: none;
-}
-
-.nav-menu {
-    padding: 0 20px;
-    font-size: 14px;
-}
-
-/* 검색창 */
-#search-box {
-    margin-bottom: 20px;
-}
-
-#search-input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-/* 리스트 스타일 */
-.subject-section {
-    margin-top: 30px;
-}
-
-.subject-title {
-    background: #f0f0f0;
-    padding: 5px 10px;
-    border-left: 5px solid #b31b1b;
+    font-size: 45px;
     font-weight: bold;
 }
 
-.paper-item {
-    margin: 15px 0;
-    padding-left: 10px;
-}
-
-.paper-id {
-    color: #b31b1b;
-    font-weight: bold;
-    font-size: 14px;
-    margin-right: 10px;
-}
-
-.paper-title {
+.sub-logo-text {
     font-size: 16px;
-    text-decoration: none;
-    color: #004b87;
-}
-
-.paper-title:hover { text-decoration: underline; }
-
-.paper-abstract {
-    font-size: 14px;
     color: #666;
-    margin-top: 5px;
-}
-
-/* 상세페이지 전용 */
-.detail-title { font-size: 24px; margin-bottom: 5px; }
-.detail-meta { color: #888; margin-bottom: 20px; font-style: italic; }
-iframe { border: 1px solid #ccc; margin-top: 20px; }
-
-.btn:hover {
-    background-color: #8c1515 !important;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-.meta-section pre {
-    margin: 0;
-    color: #333;
+    margin-left: 15px;
+    font-weight: normal;
 }
