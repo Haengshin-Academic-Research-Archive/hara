@@ -18,7 +18,7 @@ body { margin: 0; font-family: "Times New Roman", "Malgun Gothic", serif; backgr
 .nav-menu { padding: 5px 20px 15px 20px; border-bottom: 1px solid #ddd; font-size: 14px; }
 .nav-menu a { text-decoration: none; color: #004b87; font-weight: bold; }
 
-/* --- 게시글 리스트 스타일 --- */
+/* --- 게시글 리스트 스타일 (자색 제목 적용) --- */
 .paper-entry { margin-bottom: 60px; padding-bottom: 30px; border-bottom: 1px solid #eee; }
 .paper-entry .entry-subject { font-size: 14px; color: #b31b1b; font-weight: bold; margin-bottom: 5px; }
 .paper-entry h3 { margin: 0 0 10px 0; font-size: 21px; line-height: 1.2; }
@@ -26,11 +26,8 @@ body { margin: 0; font-family: "Times New Roman", "Malgun Gothic", serif; backgr
 .paper-entry h3 a:hover { text-decoration: underline; }
 .paper-entry .entry-abstract { font-size: 15px; color: #333; margin: 0; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
 
-/* --- 검색창 --- */
-#search-input { width: 100%; padding: 10px; border: 1px solid #ccc; font-size: 16px; box-sizing: border-box; margin-top: 20px; }
-
 /* --- 상세 페이지 전용 (paper.html) --- */
+#paper-detail h2 { color: #0000ff; font-size: 26px; border-bottom: 3px solid #b31b1b; padding-bottom: 10px; margin-bottom: 20px; }
 .meta-box { background: #f9f9f9; border: 1px solid #ddd; padding: 20px; margin: 20px 0; }
 pre { white-space: pre-wrap; font-family: serif; font-size: 15px; }
-iframe { width: 100%; border: 1px solid #ccc; margin-top: 20px; }
-
+iframe { width: 100%; border: 1px solid #ccc; margin-top: 20px; min-height: 900px; }
