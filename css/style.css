@@ -1,13 +1,29 @@
-/* 상단 검정 배너 최종 보정 */
+/* --- 기본 레이아웃 및 폰트 --- */
+body {
+    margin: 0;
+    font-family: "Times New Roman", "Malgun Gothic", serif; /* arXiv 특유의 Serif 폰트 */
+    background: #fff;
+    color: #333;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- 상단 검정 배너 (로고 크기 수정) --- */
 .top-banner {
-    background: #222; /* arXiv 특유의 어두운 회색/검정 */
+    background: #222;
     color: #fff;
-    padding: 10px 0;
-    min-height: 40px; /* 최소 높이 확보 */
+    height: 45px; /* 배너 전체 높이 고정 */
+    display: flex;
+    align-items: center;
 }
 
 .banner-container {
-    max-width: 1100px;
+    width: 1050px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -16,41 +32,140 @@
 }
 
 .school-name {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
-    letter-spacing: 0.8px;
-    color: #ffffff;
+    letter-spacing: 0.5px;
 }
 
-/* 로고 깨짐 방지 핵심 설정 */
 .banner-logo {
-    height: 45px; /* 배너 높이에 맞춰 조절 */
-    width: auto; /* 너비는 비율에 맞게 자동 조절 */
-    object-fit: contain; /* 이미지가 찌그러지지 않고 영역 안에 쏙 들어가게 함 */
+    height: 30px; /* 배너 높이(45px)보다 작게 설정하여 여백 확보 */
+    width: auto;
+    object-fit: contain; /* 비율 유지하며 크기 맞춤 */
     display: block;
 }
 
-/* 메인 HARA 로고와 서브 텍스트 정렬 */
+/* --- HARA 메인 로고 영역 --- */
 .main-logo-area {
-    padding: 25px 20px 10px 20px;
+    padding: 20px 20px 5px 20px;
 }
 
 .main-logo-area h1 {
     display: flex;
-    align-items: baseline; /* 글자 밑줄 맞춤 */
+    align-items: baseline;
     margin: 0;
+    font-size: 40px;
 }
 
 .main-logo-area h1 a {
-    font-size: 45px;
-    color: #b31b1b;
+    color: #b31b1b; /* arXiv 상징색: 짙은 빨강 */
     text-decoration: none;
     font-weight: bold;
 }
 
 .sub-logo-text {
-    font-size: 16px;
+    font-size: 15px;
     color: #666;
-    margin-left: 15px;
+    margin-left: 12px;
     font-family: sans-serif;
+    font-weight: normal;
+}
+
+/* --- 네비게이션 메뉴 --- */
+.nav-menu {
+    padding: 5px 20px 15px 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #004b87;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+/* --- 검색창 스타일 --- */
+#search-box {
+    margin: 20px 0;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* --- 리스트 및 섹션 --- */
+.subject-section {
+    margin-top: 35px;
+}
+
+.subject-title {
+    background: #f4f4f4;
+    border-left: 5px solid #b31b1b;
+    padding: 5px 12px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.paper-item {
+    margin: 12px 0;
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+.paper-id {
+    color: #b31b1b;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.paper-title {
+    font-size: 17px;
+    text-decoration: none;
+    color: #004b87;
+}
+
+.paper-title:hover {
+    text-decoration: underline;
+}
+
+/* --- 상세 페이지 (paper.html) 전용 스타일 --- */
+.meta-box {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.meta-box pre {
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-family: serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+iframe {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #eee;
+    margin-top: 20px;
+}
+
+.btn-download {
+    background: #b31b1b;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    display: inline-block;
 }
