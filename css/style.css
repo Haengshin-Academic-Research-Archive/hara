@@ -1,8 +1,9 @@
-/* 상단 검정 배너 스타일 */
+/* 상단 검정 배너 최종 보정 */
 .top-banner {
-    background: #222;
+    background: #222; /* arXiv 특유의 어두운 회색/검정 */
     color: #fff;
-    padding: 10px 0; /* 위아래 간격 */
+    padding: 10px 0;
+    min-height: 40px; /* 최소 높이 확보 */
 }
 
 .banner-container {
@@ -18,25 +19,32 @@
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 0.8px;
+    color: #ffffff;
 }
 
+/* 로고 깨짐 방지 핵심 설정 */
 .banner-logo {
-    height: 40px; /* 로고 높이를 배너에 맞게 조절 */
-    width: auto;
+    height: 45px; /* 배너 높이에 맞춰 조절 */
+    width: auto; /* 너비는 비율에 맞게 자동 조절 */
+    object-fit: contain; /* 이미지가 찌그러지지 않고 영역 안에 쏙 들어가게 함 */
     display: block;
 }
 
-/* 메인 HARA 로고 디자인 */
+/* 메인 HARA 로고와 서브 텍스트 정렬 */
+.main-logo-area {
+    padding: 25px 20px 10px 20px;
+}
+
 .main-logo-area h1 {
     display: flex;
-    align-items: baseline;
-    padding: 20px;
+    align-items: baseline; /* 글자 밑줄 맞춤 */
+    margin: 0;
 }
 
 .main-logo-area h1 a {
+    font-size: 45px;
     color: #b31b1b;
     text-decoration: none;
-    font-size: 45px;
     font-weight: bold;
 }
 
@@ -44,5 +52,5 @@
     font-size: 16px;
     color: #666;
     margin-left: 15px;
-    font-weight: normal;
+    font-family: sans-serif;
 }
