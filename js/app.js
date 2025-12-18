@@ -7,11 +7,11 @@ function escapeHtml(s) {
 
 async function fetchData() {
     const res = await fetch("./manifest.json", { cache: "no-store" });
-    if (!res.ok) throw new Error("manifest.json 로드 실패");
+    if (!res.ok) throw new Error("데이터 로드 실패");
     return await res.json();
 }
 
-/** [메인 페이지] 리스트 구분 방식 적용 **/
+/** 메인 페이지 **/
 async function initMain() {
     const el = document.getElementById("content-area");
     if (!el) return;
@@ -23,13 +23,13 @@ async function initMain() {
             if (!filtered.length) return;
 
             const section = document.createElement("section");
-            section.innerHTML = `<div style="background:#f4f4f4; border-left:5px solid #b31b1b; padding:5px 12px; font-weight:bold; margin:30px 0 15px 0;">${sub}</div>`;
+            section.innerHTML = `<div style="background:#f4f4f4; border-left:5px solid #b31b1b; padding:8px 12px; font-weight:bold; margin:40px 0 25px 0; font-size:18px;">${sub}</div>`;
             
             filtered.forEach(p => {
                 const item = document.createElement("div");
                 item.className = "paper-entry";
                 item.innerHTML = `
-                    <div class="entry-meta">arXiv:hangshin/${p.id} [${p.subject}]</div>
+                    <div class="entry-subject">[${p.subject}]</div>
                     <h3><a href="paper.html?id=${encodeURIComponent(p.id)}">${escapeHtml(p.title)}</a></h3>
                     <p class="entry-abstract">${escapeHtml(p.abstract)}</p>
                 `;
@@ -40,7 +40,7 @@ async function initMain() {
     } catch (e) { el.innerHTML = `<p style="color:red">${e.message}</p>`; }
 }
 
-/** [랜덤 페이지] 리스트 구분 방식 적용 **/
+/** 랜덤 페이지 **/
 async function initRandom() {
     const el = document.getElementById("random-container");
     if (!el) return;
@@ -55,7 +55,7 @@ async function initRandom() {
                 const d = document.createElement("div");
                 d.className = "paper-entry";
                 d.innerHTML = `
-                    <div class="entry-meta">arXiv:hangshin/${p.id} [${p.subject}]</div>
+                    <div class="entry-subject">[${p.subject}]</div>
                     <h3><a href="paper.html?id=${encodeURIComponent(p.id)}">${escapeHtml(p.title)}</a></h3>
                     <p class="entry-abstract">${escapeHtml(p.abstract)}</p>
                 `;
@@ -68,6 +68,7 @@ async function initRandom() {
     } catch (e) { console.error(e); }
 }
 
+/** 상세 페이지 **/
 async function initDetail() {
     const el = document.getElementById("paper-detail");
     if (!el) return;
@@ -81,8 +82,7 @@ async function initDetail() {
             const mRes = await fetch(encodeURI(p.meta));
             metaTxt = mRes.ok ? await mRes.text() : "Metadata missing";
         } catch(err) { metaTxt = "Load error"; }
-        el.innerHTML = `<h2 style="border-bottom:3px solid #b31b1b; padding-bottom:10px;">${escapeHtml(p.title)}</h2><div class="meta-box"><pre>${escapeHtml(metaTxt)}</pre></div><iframe src="${encodeURI(p.pdf)}" width="100%" height="900px"></iframe>`;
-    } catch (e) { el.innerHTML = `<p style="color:red">${e.message}</p>`; }
-}
+        el.innerHTML = `
+            <h2 style="border-bottom:3px solid #b31b1b; padding-bottom:10px; color:#007b8b;">${escapeHtml(p.title)}</h2>
+            <div class="meta-box"><pre>${escapeHtml(metaTxt)}</pre
 
-window.addEventListener("DOMContentLoaded", () => { initMain(); initDetail(); initRandom(); });
