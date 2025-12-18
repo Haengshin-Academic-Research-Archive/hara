@@ -18,52 +18,19 @@ body { margin: 0; font-family: "Times New Roman", "Malgun Gothic", serif; backgr
 .nav-menu { padding: 5px 20px 15px 20px; border-bottom: 1px solid #ddd; font-size: 14px; }
 .nav-menu a { text-decoration: none; color: #004b87; font-weight: bold; }
 
-/* --- [수정] arXiv 스타일 게시글 리스트 --- */
-.paper-entry {
-    margin-bottom: 60px; /* 간격 대폭 넓힘 */
-    padding-bottom: 30px;
-    border-bottom: 1px solid #eee;
-}
+/* --- 게시글 리스트 스타일 --- */
+.paper-entry { margin-bottom: 60px; padding-bottom: 30px; border-bottom: 1px solid #eee; }
+.paper-entry .entry-subject { font-size: 14px; color: #b31b1b; font-weight: bold; margin-bottom: 5px; }
+.paper-entry h3 { margin: 0 0 10px 0; font-size: 21px; line-height: 1.2; }
+.paper-entry h3 a { text-decoration: none; color: #0000ff; font-weight: normal; }
+.paper-entry h3 a:hover { text-decoration: underline; }
+.paper-entry .entry-abstract { font-size: 15px; color: #333; margin: 0; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
 
-/* 분류 표시 (붉은 자색 포인트) */
-.paper-entry .entry-subject {
-    font-size: 14px;
-    color: #b31b1b;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
+/* --- 검색창 --- */
+#search-input { width: 100%; padding: 10px; border: 1px solid #ccc; font-size: 16px; box-sizing: border-box; margin-top: 20px; }
 
-/* 제목 스타일 (arXiv 고유의 자색/청보라색) */
-.paper-entry h3 {
-    margin: 0 0 10px 0;
-    font-size: 21px;
-    line-height: 1.2;
-}
-
-.paper-entry h3 a {
-    text-decoration: none;
-    color: #0000ff; /* arXiv 검색 결과의 파란 자색 */
-    font-weight: normal; /* arXiv는 제목이 아주 굵지 않음 */
-}
-
-.paper-entry h3 a:hover {
-    text-decoration: underline;
-}
-
-/* 초록(Abstract) 스타일 */
-.paper-entry .entry-abstract {
-    font-size: 15px;
-    color: #333;
-    margin: 0;
-    line-height: 1.6;
-    /* 4줄 초과 시 생략 */
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-/* 상세페이지 및 기타 */
+/* --- 상세 페이지 전용 (paper.html) --- */
 .meta-box { background: #f9f9f9; border: 1px solid #ddd; padding: 20px; margin: 20px 0; }
 pre { white-space: pre-wrap; font-family: serif; font-size: 15px; }
 iframe { width: 100%; border: 1px solid #ccc; margin-top: 20px; }
+
